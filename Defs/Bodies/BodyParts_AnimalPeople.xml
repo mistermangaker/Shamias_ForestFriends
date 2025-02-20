@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	
+	
+   <BodyPartDef>
+    <defName>MMM_NekoTail</defName>
+    <label>animal tail</label>
+    <hitPoints>15</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+
+    <BodyPartDef>
+    <defName>MMM_NekoEar</defName>
+    <label>animal ear</label>
+    <hitPoints>12</hitPoints>
+    <frostbiteVulnerability>5</frostbiteVulnerability>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+	<BodyPartDef>
+		<defName>MMM_BirdArm</defName>
+		<label>wing</label>
+		<hitPoints>30</hitPoints>
+		<skinCovered>false</skinCovered>
+		<canScarify>true</canScarify>
+		<tags>
+			<li>ManipulationLimbCore</li>
+			<li>Mirrored</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>MMM_BirdHand</defName>
+		<label>wing tip</label>
+		<hitPoints>25</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>ManipulationLimbSegment</li>
+			<li>Mirrored</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>MMM_Metacarpals</defName>
+		<label>metacarpals</label>
+		<hitPoints>25</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MovingLimbSegment</li>
+			<li>Mirrored</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>MMM_PrimaryWingFeathers</defName>
+		<label>primary wing feathers</label>
+		<hitPoints>7</hitPoints>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>ManipulationLimbSegment</li>
+			<li>Mirrored</li>
+		</tags>
+		<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>MMM_PrimaryFlightFeathers</defName>
+		<label>primary flight feathers</label>
+		<hitPoints>7</hitPoints>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>ManipulationLimbSegment</li>
+			<li>Mirrored</li>
+		</tags>
+		<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>MMM_HeadCrest</defName>
+		<label>head crest feathers</label>
+		<hitPoints>7</hitPoints>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<skinCovered>false</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+
+
+</Defs>

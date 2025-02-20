@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+     <ThingDef ParentName="AnimalThingBase">
+    <defName>AnimalPerson_Milkable</defName>
+    <label>animal person</label>
+    <devNote>hehe milk tanks</devNote>
+    <description>an animal person but milkable</description>
+    <statBases>
+      <MoveSpeed>3.2</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <MarketValue>300</MarketValue>
+      <FilthRate>16</FilthRate>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Milk</milkDef>
+        <milkIntervalDays>1</milkIntervalDays>
+        <milkAmount>14</milkAmount>
+      </li>
+    </comps>
+    <race>
+     <wildBiomes>
+      <TemperateForest>0.2</TemperateForest>
+      <TemperateSwamp>0.2</TemperateSwamp>
+      <TropicalRainforest>0.1</TropicalRainforest>
+      <TropicalSwamp>0.1</TropicalSwamp>
+      <AridShrubland>0.1</AridShrubland>
+      <BorealForest>0.1</BorealForest>
+      <ColdBog>0.1</ColdBog>
+    </wildBiomes>
+      <body>AnimalPersonBody_NotMuch</body>
+      <herdAnimal>true</herdAnimal>
+      <packAnimal>true</packAnimal>
+      <baseBodySize>2.4</baseBodySize>
+      <baseHungerRate>0.535</baseHungerRate>
+      <baseHealthScale>1.5</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <wildness>0</wildness>
+      <roamMtbDays>2</roamMtbDays>
+      <trainability>None</trainability>
+      <meatLabel>beef</meatLabel>
+      <gestationPeriodDays>6.66</gestationPeriodDays>
+      <lifeExpectancy>22</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.20</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3333</minAge>
+          <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+          <soundDeath>Pawn_Muffalo_Death</soundDeath>
+          <soundCall>Pawn_Muffalo_Call</soundCall>
+          <soundAngry>Pawn_Muffalo_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.09)</li>
+        <li>(0.28, 0, 0)</li>
+        <li>(0.0, 0, -0.04)</li>
+        <li>(-0.28, 0, 0)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalFarm</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.8</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MMM_cowki</defName>
+    <label>cowalki</label>
+    <race>AnimalPerson_Milkable</race>
+    <combatPower>75</combatPower>
+    <ecoSystemWeight>1.1</ecoSystemWeight>
+    <wildGroupSize>3~7</wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>baby halki</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Bull</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Cow</texPath>
+          <drawSize>1.25</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+         <texPath>Things/Pawn/AnimalPerson/Cow/Bull</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+           <texPath>Things/Pawn/AnimalPerson/Cow/Cow</texPath>
+          <drawSize>1.25</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Bull</texPath>
+          <drawSize>2.15</drawSize>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Cow</texPath>
+          <drawSize>2.0</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Bull</texPath>
+          <drawSize>2.15</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Cow</texPath>
+          <drawSize>2.0</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Bull</texPath>
+          <drawSize>2.7</drawSize>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Cow</texPath>
+          <drawSize>2.6</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Bull</texPath>
+          <drawSize>2.7</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cow/Cow</texPath>
+          <drawSize>2.6</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>AnimalPerson_Shearable</defName>
+    <label>shearable animal person</label>
+    <devNote>umu</devNote>
+    <description>an animal person but shearable</description>
+    <statBases>
+      <MoveSpeed>4.8</MoveSpeed>
+      <MarketValue>210</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <FilthRate>8</FilthRate>
+    </statBases>
+    <uiIconScale>1.3</uiIconScale>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>WoolSheep</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>45</woolAmount>
+      </li>
+    </comps>
+    <race>
+    <wildBiomes>
+      <TemperateForest>0.2</TemperateForest>
+      <TemperateSwamp>0.2</TemperateSwamp>
+      <TropicalRainforest>0.1</TropicalRainforest>
+      <TropicalSwamp>0.1</TropicalSwamp>
+      <AridShrubland>0.1</AridShrubland>
+      <BorealForest>0.1</BorealForest>
+      <ColdBog>0.1</ColdBog>
+    </wildBiomes>
+      <herdAnimal>true</herdAnimal>
+      <body>AnimalPersonBody_NotMuch</body>
+      <baseBodySize>0.75</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <baseHungerRate>0.225</baseHungerRate>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <gestationPeriodDays>5.661</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.7, 1)</li>
+          <li>(2.0, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <wildness>0</wildness>
+      <roamMtbDays>5</roamMtbDays>
+      <trainability>None</trainability>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3333</minAge>
+          <soundWounded>Pawn_Sheep_Wounded</soundWounded>
+          <soundDeath>Pawn_Sheep_Death</soundDeath>
+          <soundCall>Pawn_Sheep_Call</soundCall>
+          <soundAngry>Pawn_Sheep_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Herbivore_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li>
+        <li>(0.27, 0, 0.11)</li>
+        <li>(0.0, 0, 0.05)</li>
+        <li>(-0.27, 0, 0.11)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalFarm</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.9</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+        <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MMM_Dave</defName>
+    <label>dave (of DaFeet)</label>
+    <race>AnimalPerson_Shearable</race>
+    <combatPower>55</combatPower>
+    <ecoSystemWeight>0.5</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>lamb</label>
+        <labelPlural>lambs</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepFemale</texPath>
+          <drawSize>0.4</drawSize>
+
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepFemale</texPath>
+          <drawSize>0.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepMale</texPath>
+          <drawSize>1.00</drawSize>
+         
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepFemale</texPath>
+          <drawSize>1.00</drawSize>
+    
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepMale</texPath>
+          <drawSize>1.00</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepFemale</texPath>
+          <drawSize>1.00</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepMale</texPath>
+          <drawSize>1.75</drawSize>
+
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepFemale</texPath>
+          <drawSize>1.70</drawSize>
+
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepMale</texPath>
+          <drawSize>1.75</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Sheep/SheepFemale</texPath>
+          <drawSize>1.70</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef Name="MMM_EggLayerBase" ParentName="AnimalThingBase" Abstract="True">
+    <statBases>
+      <MoveSpeed>2.1</MoveSpeed>
+      <MarketValue>50</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <FilthRate>4</FilthRate>
+    </statBases>
+
+    <race>
+    <wildBiomes>
+      <TemperateForest>0.2</TemperateForest>
+      <TemperateSwamp>0.2</TemperateSwamp>
+      <TropicalRainforest>0.1</TropicalRainforest>
+      <TropicalSwamp>0.1</TropicalSwamp>
+      <AridShrubland>0.1</AridShrubland>
+      <BorealForest>0.1</BorealForest>
+      <ColdBog>0.1</ColdBog>
+    </wildBiomes>
+      <body>AnimalPersonBody_FlappyFlappy</body>
+      <baseHungerRate>0.14</baseHungerRate>
+      <baseBodySize>0.3</baseBodySize>
+      <baseHealthScale>0.35</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <trainability>None</trainability>
+      <wildness>0</wildness>
+      <roamMtbDays>7</roamMtbDays>
+      <mateMtbHours>8</mateMtbHours>
+      <lifeExpectancy>6</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBabyTiny</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Chick_Call</soundWounded>
+          <soundDeath>Pawn_Chick_Call</soundDeath>
+          <soundCall>Pawn_Chick_Call</soundCall>
+          <soundAngry>Pawn_Chick_Call</soundAngry>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.12</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2</minAge>
+          <soundWounded>Pawn_Chicken_Wounded</soundWounded>
+          <soundDeath>Pawn_Chicken_Death</soundDeath>
+          <soundCall>Pawn_Chicken_Call</soundCall>
+          <soundAngry>Pawn_Chicken_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.24)</li>
+        <li>(0.25, 0, 0.18)</li>
+        <li>(0.0, 0, 0.07)</li>
+        <li>(-0.25, 0, 0.18)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+      <li>AnimalFarm</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>claws</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+      </li>
+       <li>
+        <label>left wing</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>0.9</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right wing</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>0.9</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>beak</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+
+<ThingDef ParentName="MMM_EggLayerBase">
+    <defName>AnimalPerson_EggLayer_Sleepy</defName>
+    <label>egg layer animal person</label>
+    <devNote>chicken</devNote>
+    <description>an animal person who lays eggs. They look at you with a bizarre enthusiam when they see you eat their eggs.</description>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>EggSleepyUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>EggSleepyFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>1</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+   </ThingDef>
+
+ <ThingDef ParentName="EggUnfertBase">
+    <defName>EggSleepyUnfertilized</defName>
+    <label>chicken egg (unfert.)</label>
+    <description>An unfertilized chicken egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggSleepyFertilized</defName>
+    <label>sleepy egg (fert.)</label>
+    <description>A fertilized sleepy egg. If all goes well, it should hatch into a lil sleepy. It can be eaten raw, but it's much better cooked.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>MMM_Sleepy</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MMM_Sleepy</defName>
+    <label>sleepy</label>
+    <labelMale>Sleepy but male</labelMale>
+    <labelFemale>Sleepy</labelFemale>
+    <race>AnimalPerson_EggLayer_Sleepy</race>
+    <combatPower>30</combatPower>
+    <ecoSystemWeight>0.30</ecoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Lil Sleepy</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chick</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>0.45</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <labelMale>cockerel</labelMale>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Rooster</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>1</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>0.75</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>0.73</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Rooster</texPath>
+          <drawSize>1</drawSize>
+          
+        </bodyGraphicData>
+        <femaleGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>1</drawSize>
+        </femaleGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>0.87</drawSize>
+        </dessicatedBodyGraphicData>
+        <femaleDessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Chicken/Chicken</texPath>
+          <drawSize>0.85</drawSize>
+        </femaleDessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+
+</Defs>

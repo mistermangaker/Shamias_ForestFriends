@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+<packageId>mmm.animalRetexture</packageId>
+	<name>Shamia's forest friends Retexture</name>
+	<author>mistermangaker</author>
+	<url></url>
+	<supportedVersions>
+		<li>1.4</li>
+		<li>1.5</li>
+	</supportedVersions>
+</ModMetaData>

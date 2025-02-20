@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+   
+  <ThingDef Name="FluffyFluffyBase" ParentName="AnimalThingBase" Abstract="True">
+    
+    <statBases>
+      <MoveSpeed>5.1</MoveSpeed>
+      <MarketValue>55</MarketValue>
+      <ComfyTemperatureMin>-35</ComfyTemperatureMin>
+    <LeatherAmount>75</LeatherAmount>
+      <RoyalFavorValue>3</RoyalFavorValue>
+    </statBases>
+    <uiIconScale>2</uiIconScale>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>AnimalPersonBody_EarsAndTail</body>
+     
+
+      <baseBodySize>0.5</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <baseHungerRate>0.4</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <leatherDef>Leather_Light</leatherDef>
+      <wildness>0.0</wildness>
+      <herdAnimal>true</herdAnimal>
+      <roamMtbDays>2</roamMtbDays>
+      <meatLabel>almost human meat</meatLabel>
+      <trainability>Advanced</trainability>
+      <gestationPeriodDays>5.661</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.8, 1)</li>
+          <li>(2.4, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>8</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.11</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2222</minAge>
+          <soundWounded>Pawn_Rodent_Wounded</soundWounded>
+          <soundDeath>Pawn_Rodent_Death</soundDeath>
+          <soundCall>Pawn_Rodent_Call</soundCall>
+          <soundAngry>Pawn_Rodent_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.17)</li>
+        <li>(0.2, 0, 0)</li>
+        <li>(0.0, 0, -0.15)</li>
+        <li>(-0.2, 0, 0)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+    </tradeTags>
+  </ThingDef>
+
+<ThingDef ParentName="FluffyFluffyBase">
+<defName>AnimalPerson_FluffyFluffy</defName>
+    <label>animal person</label>
+    <devNote>fluffyfluffy</devNote>
+    <description>an animal person</description>
+    <race>
+     <wildBiomes>
+      <TemperateForest>1.0</TemperateForest>
+      <TemperateSwamp>1.0</TemperateSwamp>
+      <TropicalRainforest>0.2</TropicalRainforest>
+      <TropicalSwamp>0.1</TropicalSwamp>
+      <AridShrubland>0.1</AridShrubland>
+      <BorealForest>0.2</BorealForest>
+      <ColdBog>0.2</ColdBog>
+    </wildBiomes>
+    </race>
+</ThingDef>
+
+<ThingDef ParentName="FluffyFluffyBase">
+<defName>AnimalPerson_FluffyFluffy_Uncommon</defName>
+    <label>animal person</label>
+    <devNote>fluffyfluffy</devNote>
+    <description>an animal person</description>
+    <race>
+     <wildBiomes>
+      <TemperateForest>0.5</TemperateForest>
+      <TemperateSwamp>0.4</TemperateSwamp>
+      <TropicalRainforest>0.2</TropicalRainforest>
+      <TropicalSwamp>0.1</TropicalSwamp>
+      <AridShrubland>0.1</AridShrubland>
+      <BorealForest>0.2</BorealForest>
+      <ColdBog>0.2</ColdBog>
+    </wildBiomes>
+    </race>
+</ThingDef>
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="AnimalPersonFluffyFluffyBase">
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+    <race>AnimalPerson_FluffyFluffy</race>
+  </PawnKindDef>
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="AnimalPersonFluffyFluffyBase_Uncommon">
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+    <race>AnimalPerson_FluffyFluffy_Uncommon</race>
+  </PawnKindDef>
+
+
+  <PawnKindDef ParentName="AnimalPersonFluffyFluffyBase_Uncommon">
+    <defName>MMM_catsani</defName>
+    <label>catsani</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cat/Cat</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cat/Cat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cat/Cat</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cat/Cat</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cat/Cat</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Cat/Cat</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="AnimalPersonFluffyFluffyBase_Uncommon">
+    <defName>MMM_shorta</defName>
+    <label>shorta</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Fennec/Fox_Fennec</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Fennec/Fox_Fennec</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Fennec/Fox_Fennec</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Fennec/Fox_Fennec</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Fennec/Fox_Fennec</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Fennec/Fox_Fennec</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="AnimalPersonFluffyFluffyBase">
+    <defName>MMM_ratmalia</defName>
+    <label>ratmalia</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Rat/Rat</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Rat/Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Rat/Rat</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Rat/Rat</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Rat/Rat</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Rat/Rat</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+  
+  <PawnKindDef ParentName="AnimalPersonFluffyFluffyBase_Uncommon">
+    <defName>MMM_eve</defName>
+    <label>eve</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Arctic/Fox_Arctic</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Arctic/Fox_Arctic</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Arctic/Fox_Arctic</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Arctic/Fox_Arctic</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Arctic/Fox_Arctic</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Fox_Arctic/Fox_Arctic</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+  <PawnKindDef ParentName="AnimalPersonFluffyFluffyBase">
+    <defName>MMM_creamy</defName>
+    <label>creamy</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Squirrel/Squirrel</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Squirrel/Squirrel</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Squirrel/Squirrel</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Squirrel/Squirrel</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Squirrel/Squirrel</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Squirrel/Squirrel</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+
+  <ThingDef Name="NotSoFluffyFluffyBase" ParentName="AnimalThingBase" Abstract="True">
+  
+    <statBases>
+      <MoveSpeed>5.1</MoveSpeed>
+      <MarketValue>55</MarketValue>
+      <ComfyTemperatureMin>-35</ComfyTemperatureMin>
+    <LeatherAmount>75</LeatherAmount>
+      <RoyalFavorValue>3</RoyalFavorValue>
+    </statBases>
+    <uiIconScale>2</uiIconScale>
+    <tools>
+     <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>AnimalPersonBody_NotMuch</body>
+      <baseBodySize>0.5</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <baseHungerRate>0.4</baseHungerRate>
+      <foodType>OmnivoreHuman</foodType>
+      <leatherDef>Leather_Light</leatherDef>
+      <wildness>0.0</wildness>
+      <herdAnimal>true</herdAnimal>
+      <roamMtbDays>2</roamMtbDays>
+      <meatLabel>almost human meat</meatLabel>
+      <trainability>Advanced</trainability>
+      <gestationPeriodDays>5.661</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.8, 1)</li>
+          <li>(2.4, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>8</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.11</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2222</minAge>
+          <soundWounded>Pawn_Rodent_Wounded</soundWounded>
+          <soundDeath>Pawn_Rodent_Death</soundDeath>
+          <soundCall>Pawn_Rodent_Call</soundCall>
+          <soundAngry>Pawn_Rodent_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.17)</li>
+        <li>(0.2, 0, 0)</li>
+        <li>(0.0, 0, -0.15)</li>
+        <li>(-0.2, 0, 0)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+    </tradeTags>
+  </ThingDef>
+
+
+<ThingDef ParentName="NotSoFluffyFluffyBase">
+  <defName>AnimalPerson_NotFluffyFluffy</defName>
+    <label>animal person</label>
+    <devNote>fluffyfluffy</devNote>
+    <description>an animal person</description>
+    <race>
+     <wildBiomes>
+      <TemperateForest>1.0</TemperateForest>
+      <TemperateSwamp>1.0</TemperateSwamp>
+      <TropicalRainforest>0.2</TropicalRainforest>
+      <TropicalSwamp>0.1</TropicalSwamp>
+      <AridShrubland>0.1</AridShrubland>
+      <BorealForest>1.0</BorealForest>
+      <ColdBog>1.0</ColdBog>
+    </wildBiomes>
+    </race>
+</ThingDef>
+
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MMM_MerpBunNormal</defName>
+    <label>bunny merp</label>
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+    <race>AnimalPerson_NotFluffyFluffy</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/Hare</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/Hare</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/Hare</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/Hare</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/Hare</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/Hare</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MMM_MerpSnowBunNormal</defName>
+    <label>snow bunny merp</label>
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.25</ecoSystemWeight>
+    <race>AnimalPerson_NotFluffyFluffy</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/SnowHare</texPath>
+          <drawSize>1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/SnowHare</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/SnowHare</texPath>
+          <drawSize>1.25</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/SnowHare</texPath>
+          <drawSize>1.25</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/SnowHare</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/AnimalPerson/Hare/SnowHare</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+
+</Defs>
