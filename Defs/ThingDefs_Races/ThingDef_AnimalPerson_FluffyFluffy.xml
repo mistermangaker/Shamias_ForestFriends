@@ -4,6 +4,7 @@
   <ThingDef Name="FluffyFluffyBase" ParentName="AnimalThingBase" Abstract="True">
     
     <statBases>
+    <Wildness>0.0</Wildness>
       <MoveSpeed>5.1</MoveSpeed>
       <MarketValue>55</MarketValue>
       <ComfyTemperatureMin>-35</ComfyTemperatureMin>
@@ -78,7 +79,7 @@
       <baseHungerRate>0.4</baseHungerRate>
       <foodType>OmnivoreHuman</foodType>
       <leatherDef>Leather_Light</leatherDef>
-      <wildness>0.0</wildness>
+      
       <herdAnimal>true</herdAnimal>
       <roamMtbDays>2</roamMtbDays>
       <meatLabel>almost human meat</meatLabel>
@@ -368,6 +369,7 @@
   <ThingDef Name="NotSoFluffyFluffyBase" ParentName="AnimalThingBase" Abstract="True">
   
     <statBases>
+    <Wildness>0.0</Wildness>
       <MoveSpeed>5.1</MoveSpeed>
       <MarketValue>55</MarketValue>
       <ComfyTemperatureMin>-35</ComfyTemperatureMin>
@@ -422,7 +424,6 @@
       <baseHungerRate>0.4</baseHungerRate>
       <foodType>OmnivoreHuman</foodType>
       <leatherDef>Leather_Light</leatherDef>
-      <wildness>0.0</wildness>
       <herdAnimal>true</herdAnimal>
       <roamMtbDays>2</roamMtbDays>
       <meatLabel>almost human meat</meatLabel>

@@ -6,6 +6,7 @@
     <devNote>hehe milk tanks</devNote>
     <description>an animal person but milkable</description>
     <statBases>
+      <Wildness>0.0</Wildness>
       <MoveSpeed>3.2</MoveSpeed>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
       <MarketValue>300</MarketValue>
@@ -36,7 +37,7 @@
       <baseHealthScale>1.5</baseHealthScale>
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Plain</leatherDef>
-      <wildness>0</wildness>
+      
       <roamMtbDays>2</roamMtbDays>
       <trainability>None</trainability>
       <meatLabel>beef</meatLabel>
@@ -192,6 +193,7 @@
     <devNote>umu</devNote>
     <description>an animal person but shearable</description>
     <statBases>
+    <Wildness>0.0</Wildness>
       <MoveSpeed>4.8</MoveSpeed>
       <MarketValue>210</MarketValue>
       <ComfyTemperatureMin>-20</ComfyTemperatureMin>
@@ -232,7 +234,7 @@
           <li>(2.0, 0)</li>
         </points>
       </litterSizeCurve>
-      <wildness>0</wildness>
+      
       <roamMtbDays>5</roamMtbDays>
       <trainability>None</trainability>
       <lifeExpectancy>12</lifeExpectancy>
@@ -377,6 +379,7 @@
 
   <ThingDef Name="MMM_EggLayerBase" ParentName="AnimalThingBase" Abstract="True">
     <statBases>
+    <Wildness>0.0</Wildness>
       <MoveSpeed>2.1</MoveSpeed>
       <MarketValue>50</MarketValue>
       <LeatherAmount>0</LeatherAmount>
@@ -400,7 +403,7 @@
       <baseHealthScale>0.35</baseHealthScale>
       <foodType>OmnivoreRoughAnimal</foodType>
       <trainability>None</trainability>
-      <wildness>0</wildness>
+      
       <roamMtbDays>7</roamMtbDays>
       <mateMtbHours>8</mateMtbHours>
       <lifeExpectancy>6</lifeExpectancy>
