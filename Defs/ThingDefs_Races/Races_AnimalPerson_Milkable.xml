@@ -31,7 +31,6 @@
     </wildBiomes>
       <body>AnimalPersonBody_NotMuch</body>
       <herdAnimal>true</herdAnimal>
-      <packAnimal>true</packAnimal>
       <baseBodySize>2.4</baseBodySize>
       <baseHungerRate>0.535</baseHungerRate>
       <baseHealthScale>1.5</baseHealthScale>
